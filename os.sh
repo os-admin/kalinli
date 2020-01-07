@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ]; then
     echo useless
-    exit 1
+    exit 0
 fi
 
 os=`uname -s`
@@ -28,13 +28,13 @@ do
     *.sh | *.py)
         annotation="# $fn"
         ;;
-    *.mysql)
+    *.sql)
         annotation="--- $fn"
         ;;
     *.html)
         annotation="<-- $fn -->"
         ;;    
-    .*)
+    *)
         annotation="// $fn"
         ;;
     esac
