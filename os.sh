@@ -45,5 +45,4 @@ do
     if [ $# -ne $# ]; then
         echo
     fi
-done | $comment    
-
+done | $comment
